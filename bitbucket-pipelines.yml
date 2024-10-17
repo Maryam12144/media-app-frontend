@@ -1,0 +1,12 @@
+pipelines:
+  default:
+     - step:
+         name: media-front-end-web
+         deployment: production
+         script:
+           - pipe: atlassian/ssh-run:0.2.2
+             variables:
+               SSH_USER: 'root'
+               SERVER: '104.236.236.23'
+               COMMAND: '/var/www/html/Dev-projects/Media/mediafrontend.sh'
+
