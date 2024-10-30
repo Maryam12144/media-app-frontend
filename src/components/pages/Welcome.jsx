@@ -21,7 +21,7 @@ function Welcome() {
         <div className="slider">
           <Carousel autoplay>
             <div className="slide">
-              <img src="../images/slide1.png" />
+              <img src="https://unsplash.com/photos/a-close-up-of-a-pine-tree-with-a-yellow-leaf-SdFm1iLa28g" />
               <div className="sliderText" style={contentStyle}>
                 <h3>
                   World's Largest <br /> Media Network
@@ -59,7 +59,7 @@ function Welcome() {
         <div className=" text-center">
           <Link to="/Login">
             <Button type="danger" className="dangerBtn">
-              Get Started
+              Let's Go
             </Button>
           </Link>
         </div>
