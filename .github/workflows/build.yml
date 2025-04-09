@@ -1,0 +1,25 @@
+name: Build Frontend
+
+on:
+  push:
+    branches:
+      - main  # or "master" depending on your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.19.1' # use whatever version your project needs
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
