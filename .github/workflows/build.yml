@@ -26,3 +26,12 @@ jobs:
         run: npm run build
         env:
           CI: false
+
+      - name: Deploy to server via SCP
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "build/"
+          target: "/var/www/html/Projects"
