@@ -3,7 +3,7 @@ name: Build Frontend
 on:
   push:
     branches:
-      - main  # or "master" depending on your default branch
+      - main
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.19.1' # use whatever version your project needs
+          node-version: '18.19.1'
 
 
       - name: Install dependencies
